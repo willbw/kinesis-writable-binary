@@ -123,7 +123,7 @@ KinesisStream.prototype.dispatch = function(records, cb) {
     const partitionKey = typeof this.partitionKey === 'function'
       ? this.partitionKey(record)
       : this.partitionKey;
-    return { Data: safeStringify(record), PartitionKey: partitionKey };
+    return { Data: record, PartitionKey: partitionKey };
   });
 
   operation.attempt(() => {
