@@ -1,3 +1,6 @@
+## NOTE
+This is the same as the original package, but won't stringify the data. This will pass the data in raw, so if you want to wrap the Bunyan data in another message format, like protocol buffers, you can do so.
+
 Kinesis writable stream for [bunyan](http://npmjs.com/package/bunyan).
 
 ## Installation
